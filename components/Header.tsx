@@ -1,15 +1,17 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import MobileMenu from "./MobileMenu";
 
 function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSection();
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <header className="z-[999] relative">
@@ -30,9 +32,9 @@ function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-300 dark:hover:text-gray-200",
                   {
-                    "text-gray-950 dark:text-gray-200":
+                    "text-gray-950 dark:text-gray-100":
                       activeSection === link.name,
                   }
                 )}
@@ -60,6 +62,19 @@ function Header() {
           ))}
         </ul>
       </nav>
+
+      {/* Mobile menu */}
+      <div
+        onClick={() => {
+          setIsActive(!isActive);
+        }}
+        className="fixed top-0 left-0 m-5 z-20 w-10 h-10 rounded-full bg-[#455CE9] cursor-pointer flex items-center justify-center shadow-lg"
+      >
+        <div
+          className={`burger w-full relative ${isActive ? "burgerActive" : ""}`}
+        ></div>
+      </div>
+      <AnimatePresence mode="wait">{isActive && <MobileMenu setIsActive={setIsActive} isActive={isActive} />}</AnimatePresence>
     </header>
   );
 }
