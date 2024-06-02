@@ -10,6 +10,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail") as string;
   const message = formData.get("message") as string;
+  let data;
 
   // simple server-side validation
   if (!validateString(senderEmail, 500)) {
@@ -23,11 +24,10 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
-  let data;
   try {
     data = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: "carlos_gomes1809@hotmail.com",
+      to: process.env.CONTACT_EMAIL as string,
       subject: "Message from contact form",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
@@ -36,6 +36,7 @@ export const sendEmail = async (formData: FormData) => {
       }),
     });
   } catch (error: unknown) {
+    console.error("Failed to send email:", getErrorMessage(error));
     return {
       error: getErrorMessage(error),
     };

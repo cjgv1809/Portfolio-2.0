@@ -4,10 +4,36 @@
 
 html {
   --line-color: #e5e7eb;
+  --burger-color-line: #000;
 }
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  --burger-color-line: #fff;
+}
+
+.burger::after,
+.burger::before {
+  @apply block h-px w-2/5 mx-auto bg-burger-color-line relative transition-transform duration-300;
+  content: "";
+}
+
+.burger::after {
+  top: -5px;
+}
+
+.burger::before {
+  top: 5px;
+}
+
+.burgerActive::after {
+  @apply transform rotate-45;
+  top: -1px;
+}
+
+.burgerActive::before {
+  @apply transform -rotate-45;
+  top: 0;
 }
 
 .borderBlack {
