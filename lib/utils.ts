@@ -24,3 +24,6 @@ export const getErrorMessage = (error: unknown): string => {
 
   return message;
 };
+
+// Define a linear interpolation function
+export const lerp = (x: number, y: number, a: number) => x * (1 - a) + y * a;
