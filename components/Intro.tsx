@@ -44,12 +44,25 @@ function Intro() {
           <motion.span
             className="absolute bottom-0 right-0 text-4xl"
             initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: ["0%", "-20%", "10%", "-15%", "5%", "0%"],
+              rotate: [0, 20, -15, 20, -10, 0],
+            }}
             transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
+              opacity: { duration: 1 },
+              scale: { duration: 1 },
+              y: {
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.25, 0.5, 0.75, 0.9, 1],
+              },
+              rotate: {
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.25, 0.5, 0.75, 0.9, 1],
+              },
             }}
           >
             👋
