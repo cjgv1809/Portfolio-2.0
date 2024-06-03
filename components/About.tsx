@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { paragraph } from "@/lib/data";
 import SectionHeading from "./SectionHeading";
+import ParagraphIntro from "./ParagraphIntro";
 
 function About() {
   const { ref } = useSectionInView("About");
@@ -17,7 +19,10 @@ function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
+
+      <ParagraphIntro paragraph={paragraph} />
+
+      {/* <p className="mb-3 text-balance">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
         passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -35,14 +40,14 @@ function About() {
         developer.
       </p>
 
-      <p>
+      <p className="text-balance">
         <span className="italic">When I&apos;m not coding</span>, I enjoy
         playing video games, watching movies, and playing with my dog. I also
         enjoy <span className="font-medium">learning new things</span>. I am
         currently learning about{" "}
         <span className="font-medium">history and philosophy</span>. I&apos;m
         also learning how to play the guitar.
-      </p>
+      </p> */}
     </motion.section>
   );
 }
