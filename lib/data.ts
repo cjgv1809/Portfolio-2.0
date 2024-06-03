@@ -33,6 +33,9 @@ export const links = [
   },
 ] as const;
 
+export const paragraph =
+  "After graduating with a degree in Electrical Engineering, I decided to pursue my passion for programming in Buenos Aires, Argentina, after migrating from my country, Venezuela. I enrolled in several courses and learned full-stack web development. My favorite part of programming is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, React Native, Next.js, TypeScript, Node.js, MongoDB, MySQL, and PostgreSQL. I am always looking to learn new technologies, which is why I am now diving deeper into backend development and Cloud Computing with AWS. At the moment, I am looking for a full-time position as a software developer. When I'm not coding, I enjoy playing video games and watching movies and series.";
+
 export const experiencesData = [
   {
     title: "Graduated bootcamp",
