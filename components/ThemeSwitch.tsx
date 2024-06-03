@@ -9,10 +9,11 @@ function ThemeSwitch() {
   return (
     <button
       type="button"
-      className="fixed right-5 top-5 sm:top-6 z-[9999] bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      className="fixed right-5 top-5 sm:top-6 z-[9999] bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 focus-visible:outline-gray-300 dark:focus-visible:outline-slate-600"
       onClick={toggleTheme}
       role="switch"
       aria-checked={theme === "light"}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       {theme === "light" ? <BsSun /> : <BsMoon />}
     </button>
