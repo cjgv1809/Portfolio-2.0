@@ -6,6 +6,18 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+export const words = [
+  "Hello",
+  "Hola",
+  "Bonjour",
+  "Ciao",
+  "Olà",
+  "やあ",
+  "Hallå",
+  "Guten tag",
+  "Hallo",
+];
+
 export const links = [
   {
     name: "Home",
