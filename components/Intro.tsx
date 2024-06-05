@@ -76,9 +76,9 @@ function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I&apos;m Carlos.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with 2 and a
+        <span className="font-bold">full-stack developer</span> with two and a
         half years of experience. I enjoy building{" "}
-        <span className="italic">sites & apps</span>.
+        <span className="italic">websites & apps</span>.
       </motion.h1>
 
       <motion.div
