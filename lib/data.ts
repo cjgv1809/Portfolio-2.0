@@ -6,17 +6,7 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
-export const words = [
-  "Hello",
-  "Hola",
-  "Bonjour",
-  "Ciao",
-  "Olà",
-  "やあ",
-  "Hallå",
-  "Guten tag",
-  "Hallo",
-];
+export const words = ["Hello", "Hola", "Olá", "Bonjour", "Ciao"];
 
 export const links = [
   {
@@ -46,32 +36,39 @@ export const links = [
 ] as const;
 
 export const paragraph =
-  "After graduating with a degree in Electrical Engineering, I decided to pursue my passion for programming in Buenos Aires, Argentina, after migrating from my country, Venezuela. I enrolled in several courses and learned full-stack web development. My favorite part of programming is the problem-solving aspect. I love the feeling of finally figuring out a solution to a problem. My core stack is React, React Native, Next.js, TypeScript, Node.js, MongoDB, MySQL, and PostgreSQL. I am always looking to learn new technologies, which is why I am now diving deeper into backend development and Cloud Computing with AWS. At the moment, I am looking for a full-time position as a software developer. When I'm not coding, I enjoy playing video games and watching movies and series.";
+  "After earning a degree in Electrical Engineering in Venezuela, I moved to Buenos Aires, Argentina, to pursue my passion for programming. I trained in full-stack web development with a focus on React, React Native, Next.js, TypeScript, Node.js, MongoDB, MySQL, and PostgreSQL. I'm continuously learning new technologies, currently exploring backend development and AWS Cloud Computing. I am seeking a frontend/full-time software developer position.";
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+    title: "Frontend web developer",
+    company: "Jumpweb",
+    description: [
+      "Create an interactive user interface with React.js, Next.js and Redux.",
+      "Build custom WordPress plugins from scratch utilizing the latest industry standards of coding practices.",
+      "Develop a responsive website using HTML, CSS and JavaScript.",
+      "Learn new front-end programming languages and methodologies to perform tasks.",
+      "Test websites across multiple browsers, platforms, and devices for optimal performance results.",
+      "Translate flat design files to clean, accessible and interactive user experiences.",
+    ],
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Jan 2024 - Jun 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+    title: "UX/UI Developer",
+    company: "Making Sense",
+    description: [
+      "Developing and maintaining web applications using React.js/Typescript and components with Storybook.",
+      "Collaborating with cross-functional teams including designers, product managers and other developers to create high-quality products.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Testing the application in different environments and devices to ensure the quality of the product.",
+      "Deploying features to production using pipelines already created by the DevOps team.",
+      "Working on a ecommerce platform for a client using basic web technologies like HTML, CSS, SASS, JS, jQuery, XSL and other related technologies.",
+      "Participating in the development of a new Design System for the clients.",
+      "Working with the QA team to ensure the quality of the product.",
+      "Demoing developed features for the clients at the end of the sprints.",
+    ],
+    icon: React.createElement(CgWorkAlt),
+    date: "Jun 2021 - Jul 2023",
   },
 ] as const;
 

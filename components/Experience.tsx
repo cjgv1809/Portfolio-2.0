@@ -38,17 +38,24 @@ function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
+              dateClassName="text-gray-700 dark:text-white/75"
               icon={item.icon}
               iconStyle={{
                 background: theme === "light" ? "white" : "rgb(3, 7, 18)",
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              <h3 className="font-semibold text-base capitalize">
+                {item.title}
+              </h3>
+              <p className="!font-light !mt-0 !mb-3">{item.company}</p>
+              <div className="!font-light text-gray-700 dark:text-white/75 !text-xs">
+                {item.description.map((line, i) => (
+                  <ul key={line + i.toString()} className="list-disc">
+                    <li className="!mb-2">{line}</li>
+                  </ul>
+                ))}
+              </div>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
