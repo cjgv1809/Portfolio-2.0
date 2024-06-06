@@ -71,14 +71,26 @@ function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 text-2xl font-light !leading-[1.5] sm:text-4xl relative text-balance"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I&apos;m Carlos.</span> I&apos;m a{" "}
-        <span className="font-bold">full-stack developer</span> with two and a
-        half years of experience. I enjoy building{" "}
-        <span className="italic">websites & apps</span>.
+        I&apos;m{" "}
+        <span className="relative font-semibold inline-block group">
+          Carlos.
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
+        </span>{" "}
+        I&apos;m a{" "}
+        <span className="relative font-semibold inline-block">
+          frontend/mobile developer
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
+        </span>{" "}
+        with two and a half years of experience. I enjoy building{" "}
+        <span className="relative inline-block italic">
+          websites & apps
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+        .
       </motion.h1>
 
       <motion.div
