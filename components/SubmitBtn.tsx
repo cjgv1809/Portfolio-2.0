@@ -7,7 +7,7 @@ function SubmitBtn() {
   return (
     <button
       type="submit"
-      className="group flex items-center justify-center gap-2 h-[3rem] w-full sm:w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all duration-200 ease-in-out focus-visible:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:text-black disabled:scale-100 disabled:bg-opacity-65 disabled:cursor-not-allowed cursor-pointer"
+      className="group gap-2 w-full sm:w-[8rem] rounded-full outline-none focus-visible:scale-110 hover:scale-110 active:scale-105 disabled:scale-100 disabled:bg-opacity-65 disabled:cursor-not-allowed cursor-pointer inline-flex h-12 animate-shimmer items-center justify-center border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-all duration-200 ease-in-out"
       disabled={pending}
     >
       {pending ? (
