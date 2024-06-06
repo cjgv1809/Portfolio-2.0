@@ -19,7 +19,7 @@ function Preloader() {
       () => {
         setIndex(index + 1);
       },
-      index == 0 ? 500 : 150
+      index == 0 ? 300 : 150
     );
   }, [index]);
 
