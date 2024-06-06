@@ -81,8 +81,8 @@ function Intro() {
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
         </span>{" "}
         I&apos;m a{" "}
-        <span className="relative font-semibold inline-block">
-          frontend/mobile developer
+        <span className="relative font-semibold inline-block group">
+          Frontend/Mobile developer
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
         </span>{" "}
         with two and a half years of experience. I enjoy building{" "}

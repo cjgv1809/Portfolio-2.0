@@ -25,7 +25,7 @@ function ParagraphIntro({ paragraph }: ParagraphIntroProps) {
   return (
     <p
       ref={container}
-      className="flex max-w-[75ch] flex-wrap font-normal text-lg text-gray-600 dark:text-white/70 text-balance"
+      className="flex max-w-[75ch] flex-wrap justify-center sm:justify-start font-normal text-lg text-gray-600 dark:text-white/70 text-balance"
     >
       {words.map((word, i) => {
         const start = i / words.length;
