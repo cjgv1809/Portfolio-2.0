@@ -8,6 +8,7 @@ import {
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { useTheme } from "@/hooks/useTheme";
+import SpotLight from "./SpotLight";
 import SectionHeading from "./SectionHeading";
 import "react-vertical-timeline-component/style.min.css";
 
@@ -18,6 +19,7 @@ function Experience() {
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My experience</SectionHeading>
+      <SpotLight />
       <VerticalTimeline lineColor="" animate>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
@@ -38,7 +40,7 @@ function Experience() {
                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
               }}
               date={item.date}
-              dateClassName="text-gray-700 dark:text-white/75"
+              dateClassName="text-gray-700 dark:text-white/75 sm:mx-2"
               icon={item.icon}
               iconStyle={{
                 background: theme === "light" ? "white" : "rgb(3, 7, 18)",

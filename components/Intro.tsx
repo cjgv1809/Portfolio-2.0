@@ -18,7 +18,7 @@ function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[50rem]"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -31,13 +31,14 @@ function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
+              src="/ReadyPlayerMe-Avatar.webp"
               alt="Carlos portrait"
-              width="192"
-              height="192"
+              title="Carlos portrait"
+              width={250}
+              height={250}
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -78,12 +79,12 @@ function Intro() {
         I&apos;m{" "}
         <span className="relative font-semibold inline-block group">
           Carlos.
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}
         I&apos;m a{" "}
         <span className="relative font-semibold inline-block group">
           Frontend/Mobile developer
-          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 group-hover:w-full"></span>
+          <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}
         with two and a half years of experience. I enjoy building{" "}
         <span className="relative inline-block italic">
