@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Meteors from "./Meteors";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -60,6 +61,7 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
 
         group-even:right-[initial] group-even:-left-40"
         />
+        <Meteors number={3} />
       </section>
     </motion.div>
   );
