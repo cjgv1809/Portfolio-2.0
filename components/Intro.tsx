@@ -9,10 +9,12 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { useTheme } from "@/hooks/useTheme";
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSection();
+  const { theme } = useTheme();
 
   return (
     <section
@@ -31,19 +33,21 @@ function Intro() {
             }}
           >
             <Image
-              src="/ReadyPlayerMe-Avatar.webp"
+              src="/images/avatar.webp"
               alt="Carlos portrait"
               title="Carlos portrait"
               width={250}
               height={250}
               quality="95"
               priority={true}
-              className="h-40 w-40 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className={`h-40 w-40 rounded-full object-cover border-[0.35rem] shadow-xl ${
+                theme === "light" ? "border-white/10" : "border-white/95"
+              }`}
             />
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 right-2 text-3xl"
             initial={{ opacity: 0, scale: 0 }}
             animate={{
               opacity: 1,

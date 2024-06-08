@@ -1,8 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import ProductManager from "@/public/images/products-manager.png";
+import UpTask from "@/public/images/uptask.png";
+import MedicalAppointments from "@/public/images/medical-appointments.png";
 
 export const words = ["Hello", "Olá", "Bonjour", "Ciao", "Hola"];
 
@@ -73,27 +73,50 @@ export const experiencesData = [
 export const projectsData = [
   {
     id: 1,
-    title: "CorpComment",
+    title: "Products manager",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A Vite Project made with Reactjs, TypeScript, Valibot for validating schemas, TailwindCSS and Flowbite for styling, Axios for handling requests and React Router DOM.",
+    tags: [
+      "React",
+      "Tailwind",
+      "TypeScript",
+      "PostgreSQL",
+      "Nodejs",
+      "Express",
+      "Sequelize",
+      "Swagger",
+      "SuperTest",
+      "Jest",
+    ],
+    imageUrl: ProductManager,
   },
   {
     id: 2,
-    title: "rmtDev",
+    title: "UpTask MERN",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A project and task management application created using the MERN stack, Socket.io, and styled with Tailwind CSS, DaisyUI, and HeadlessUI.",
+    tags: [
+      "React",
+      "Cypress",
+      "HeadlessUI",
+      "DaisyUI",
+      "Tailwind",
+      "ContextAPI",
+      "MongoDB",
+      "Nodejs",
+      "Express",
+      "JWT",
+      "Socket.io",
+    ],
+    imageUrl: UpTask,
   },
   {
     id: 3,
-    title: "Word Analytics",
+    title: "Medical appointments app",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A medical appointments app for pets, developed with React Native CLI, Typescript and Async Storage for persisting data.",
+    tags: ["React Native", "TypeScript", "Async Storage"],
+    imageUrl: MedicalAppointments,
   },
 ] as const;
 
@@ -103,18 +126,18 @@ export const skillsData = [
   "JavaScript",
   "TypeScript",
   "React",
+  "React Native",
   "Next.js",
   "Node.js",
-  "Git",
   "Tailwind",
   "Prisma",
-  "MongoDB",
   "Redux",
   "GraphQL",
   "Apollo",
   "Express",
+  "MySQL",
   "PostgreSQL",
-  "Python",
-  "Django",
+  "MongoDB",
   "Framer Motion",
+  "Threejs",
 ] as const;
