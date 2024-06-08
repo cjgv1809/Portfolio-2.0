@@ -17,6 +17,7 @@ function About() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
+      data-scroll-section
     >
       <SectionHeading>About me</SectionHeading>
       <ParagraphIntro paragraph={paragraph} />

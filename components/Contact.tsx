@@ -44,6 +44,7 @@ function Contact() {
       viewport={{
         once: true,
       }}
+      data-scroll-section
     >
       <SectionHeading>Contact me</SectionHeading>
 

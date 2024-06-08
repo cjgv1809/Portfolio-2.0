@@ -32,17 +32,17 @@ function Spotlight({ className, fill }: SpotlightProps) {
             fill ||
             (theme === "light" ? "url(#light-gradient)" : "url(#dark-gradient)")
           }
-          fillOpacity="0.21"
+          fillOpacity="0.35" // Adjusted for better visibility
         ></ellipse>
       </g>
       <defs>
         <linearGradient id="light-gradient">
-          <stop offset="5%" stop-color="#fbe2e3" />
-          <stop offset="95%" stop-color="#dbd7fb" />
+          <stop offset="5%" stopColor="#fbe2e3" />
+          <stop offset="95%" stopColor="#dbd7fb" />
         </linearGradient>
         <linearGradient id="dark-gradient">
-          <stop offset="5%" stop-color="#946263" />
-          <stop offset="95%" stop-color="#676394" />
+          <stop offset="5%" stopColor="#946263" />
+          <stop offset="95%" stopColor="#676394" />
         </linearGradient>
         <filter
           id="filter"
