@@ -1,6 +1,7 @@
 "use client";
 
 import { Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import dynamic from "next/dynamic";
 import ActiveSectionContextProvider from "@/context/activeSectionContext";
 import ThemeContextProvider from "@/context/themeSwitchContext";
@@ -131,6 +132,7 @@ export default function RootLayout({
             </Suspense>
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <Analytics />
       </body>
     </html>
   );
