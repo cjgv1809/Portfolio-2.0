@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { useSectionInView } from "@/hooks/useSectionInView";
+import { useTheme } from "@/hooks/useTheme";
 import { sendEmail } from "@/actions/sendEmail";
 import SectionHeading from "./SectionHeading";
 import SubmitBtn from "./SubmitBtn";
@@ -14,16 +15,31 @@ import Label from "./Label";
 function Contact() {
   const { ref } = useSectionInView("Contact");
   const formRef = useRef<HTMLFormElement>(null);
+  const { theme } = useTheme();
 
   const handleSubmit = async (formData: FormData) => {
     const { error, data } = await sendEmail(formData);
 
     if (error) {
-      toast.error(error);
+      toast.error(error, {
+        icon: "❌",
+        style: {
+          borderRadius: "5px",
+          background: theme === "dark" ? "#333" : "#fff",
+          color: theme === "dark" ? "#fff" : "#333",
+        },
+      });
       return;
     }
 
-    toast.success("Email sent successfully!");
+    toast.success("Email sent successfully!", {
+      icon: "✔️",
+      style: {
+        borderRadius: "5px",
+        background: theme === "dark" ? "#333" : "#fff",
+        color: theme === "dark" ? "#fff" : "#333",
+      },
+    });
     // reset form fields
     formRef.current?.reset();
   };
