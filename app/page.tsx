@@ -8,14 +8,14 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-1 justify-items-center px-4">
+    <main className="grid grid-cols-1 justify-items-center px-5">
       <Intro />
       <SectionDivider />
       <About />
       <Experience />
       <Projects />
       <Skills />
-      <Contact /> 
+      <Contact />
     </main>
   );
 }
