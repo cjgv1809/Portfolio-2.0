@@ -31,7 +31,7 @@ function MobileMenu({ setIsActive }: MobileMenuProps) {
   }, [refMenu, setIsActive]);
 
   return (
-    <motion.div
+    <motion.aside
       variants={menuSlide}
       initial="initial"
       animate="enter"
@@ -58,6 +58,7 @@ function MobileMenu({ setIsActive }: MobileMenuProps) {
                 onClick={() => {
                   setActiveSection(data.name);
                   setTimeOfLastClick(Date.now());
+                  setIsActive(false);
                 }}
               >
                 {data.name}
@@ -65,13 +66,6 @@ function MobileMenu({ setIsActive }: MobileMenuProps) {
             );
           })}
         </div>
-
-        {/* <div className="flex w-full justify-between text-xs gap-10">
-          <a>Awwwards</a>
-          <a>Instagram</a>
-          <a>Dribble</a>
-          <a>LinkedIn</a>
-        </div> */}
       </div>
 
       <svg className="absolute top-0 -right-[99px] rotate-180 w-[100px] h-full dark:fill-[#292929] fill-[#f3f4f6] stroke-none">
@@ -82,7 +76,7 @@ function MobileMenu({ setIsActive }: MobileMenuProps) {
           exit="exit"
         ></motion.path>
       </svg>
-    </motion.div>
+    </motion.aside>
   );
 }
 
