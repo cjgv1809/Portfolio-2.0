@@ -16,6 +16,26 @@ function Intro() {
   const { setActiveSection, setTimeOfLastClick } = useActiveSection();
   const { theme } = useTheme();
 
+  const motionVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1 },
+  };
+
+  const waveVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: ["0%", "-20%", "10%", "-15%", "5%", "0%"],
+      rotate: [0, 20, -15, 20, -10, 0],
+      transition: {
+        duration: 2,
+        ease: "easeInOut",
+        times: [0, 0.25, 0.5, 0.75, 0.9, 1],
+      },
+    },
+  };
+
   return (
     <section
       ref={ref}
@@ -25,12 +45,10 @@ function Intro() {
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "tween",
-              duration: 0.2,
-            }}
+            initial="hidden"
+            animate="visible"
+            variants={motionVariants}
+            transition={{ type: "tween", duration: 0.2 }}
           >
             <Image
               src="/images/avatar.webp"
@@ -48,27 +66,9 @@ function Intro() {
 
           <motion.span
             className="absolute bottom-0 right-2 text-3xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: ["0%", "-20%", "10%", "-15%", "5%", "0%"],
-              rotate: [0, 20, -15, 20, -10, 0],
-            }}
-            transition={{
-              opacity: { duration: 1 },
-              scale: { duration: 1 },
-              y: {
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.25, 0.5, 0.75, 0.9, 1],
-              },
-              rotate: {
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.25, 0.5, 0.75, 0.9, 1],
-              },
-            }}
+            initial="hidden"
+            animate="visible"
+            variants={waveVariants}
           >
             👋
           </motion.span>
@@ -102,9 +102,7 @@ function Intro() {
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        transition={{ delay: 0.1 }}
       >
         <Link
           href="#contact"
