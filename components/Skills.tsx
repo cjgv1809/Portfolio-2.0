@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/hooks/useSectionInView";
 import SectionHeading from "./SectionHeading";
-import MagneticTag from "./MagneticTag";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -29,25 +28,23 @@ function Skills() {
       id="skills"
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
-      data-scroll-section
     >
       <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-3 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
-          <MagneticTag key={index}>
-            <motion.li
-              className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-              variants={fadeInAnimationVariants}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-            >
-              {skill}
-            </motion.li>
-          </MagneticTag>
+          <motion.li
+            key={index}
+            className="bg-white text-black borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white dark:border-white/10 hover:bg-black hover:text-white hover:border-black dark:hover:bg-white dark:hover:text-black transition-colors duration-300 ease-in-out"
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+          >
+            {skill}
+          </motion.li>
         ))}
       </ul>
     </section>

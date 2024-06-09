@@ -9,6 +9,7 @@ import SectionHeading from "./SectionHeading";
 import SubmitBtn from "./SubmitBtn";
 import Input from "./Input";
 import Textarea from "./Textarea";
+import Label from "./Label";
 
 function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -44,7 +45,6 @@ function Contact() {
       viewport={{
         once: true,
       }}
-      data-scroll-section
     >
       <SectionHeading>Contact me</SectionHeading>
 
@@ -64,18 +64,7 @@ function Contact() {
         action={handleSubmit}
         ref={formRef}
       >
-        <label htmlFor="your-email" className="sr-only">
-          Email
-        </label>
-        {/* <input
-          id="your-email"
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white/10 dark:text-white transition-all outline-none focus-visible:outline-gray-300 focus:outline-gray-300 dark:focus:outline-slate-600 dark:focus-visible:outline-slate-600"
-          name="senderEmail"
-          type="email"
-          required
-          maxLength={500}
-          placeholder="Enter your email"
-        /> */}
+        <Label htmlFor="your-email">Email</Label>
         <Input
           id="your-email"
           name="senderEmail"
@@ -84,17 +73,7 @@ function Contact() {
           maxLength={500}
           placeholder="Enter your email"
         />
-        <label htmlFor="your-message" className="sr-only">
-          Message
-        </label>
-        {/* <textarea
-          id="your-message"
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white/10 dark:text-white transition-all outline-none focus-visible:outline-gray-300 focus:outline-gray-300 dark:focus:outline-slate-600 dark:focus-visible:outline-slate-600 resize-none"
-          name="message"
-          placeholder="Enter your message"
-          required
-          maxLength={5000}
-        /> */}
+        <Label htmlFor="your-message">Message</Label>
         <Textarea
           id="your-message"
           name="message"
