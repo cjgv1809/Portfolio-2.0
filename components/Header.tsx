@@ -66,7 +66,7 @@ function Header() {
       </nav>
 
       {/* Mobile menu */}
-      <div
+      <button
         onClick={() => {
           setIsActive(!isActive);
         }}
@@ -75,7 +75,7 @@ function Header() {
         <div
           className={`burger w-full relative ${isActive ? "burgerActive" : ""}`}
         ></div>
-      </div>
+      </button>
       <AnimatePresence mode="wait">
         {isActive && <MobileMenu setIsActive={setIsActive} />}
       </AnimatePresence>

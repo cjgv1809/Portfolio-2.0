@@ -45,11 +45,12 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
           <Meteors number={5} />
         </div>
 
-        <Image
-          src={imageUrl}
-          alt={title}
-          quality={95}
-          className="absolute hidden sm:block top-0 -right-40 w-[30.25rem] h-full object-cover shadow-2xl
+        <figure>
+          <Image
+            src={imageUrl}
+            alt={title}
+            quality={95}
+            className="absolute hidden sm:block top-0 -right-40 w-[30.25rem] h-full object-cover shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
@@ -61,7 +62,8 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
         group-even:group-hover:rotate-2
 
         group-even:right-[initial] group-even:-left-40"
-        />
+          />
+        </figure>
       </article>
     </motion.div>
   );

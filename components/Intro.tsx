@@ -50,18 +50,20 @@ function Intro() {
             variants={motionVariants}
             transition={{ type: "tween", duration: 0.2 }}
           >
-            <Image
-              src="/images/avatar.webp"
-              alt="Carlos portrait"
-              title="Carlos portrait"
-              width={250}
-              height={250}
-              quality="95"
-              priority={true}
-              className={`h-40 w-40 rounded-full object-cover border-[0.35rem] shadow-xl ${
-                theme === "light" ? "border-white/10" : "border-white/95"
-              }`}
-            />
+            <figure>
+              <Image
+                src="/images/avatar.webp"
+                alt="Carlos portrait"
+                title="Carlos portrait"
+                width={250}
+                height={250}
+                quality="95"
+                priority={true}
+                className={`h-40 w-40 rounded-full object-cover border-[0.35rem] shadow-xl ${
+                  theme === "light" ? "border-white/10" : "border-white/95"
+                }`}
+              />
+            </figure>
           </motion.div>
 
           <motion.span
@@ -125,6 +127,7 @@ function Intro() {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
+          aria-label="Contact me here"
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -134,6 +137,7 @@ function Intro() {
           className="group bg-white px-7 py-3 w-full sm:w-fit flex justify-center items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 transition-all duration-200 ease-in-out"
           href="/docs/Carlos_Gomes_Resume-FE-Dev.pdf"
           download="Carlos_Gomes_Resume-FE-Dev.pdf"
+          aria-label="Download CV"
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
