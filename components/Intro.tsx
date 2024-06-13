@@ -12,7 +12,7 @@ import { useActiveSection } from "@/hooks/useActiveSection";
 import { useTheme } from "@/hooks/useTheme";
 
 function Intro() {
-  const { ref } = useSectionInView("Home", 0.5);
+  const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSection();
   const { theme } = useTheme();
 
@@ -81,12 +81,26 @@ function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         I&apos;m{" "}
-        <span className="relative font-semibold inline-block group">
+        <span
+          style={
+            {
+              "--shimmer-width": "100px",
+            } as React.CSSProperties
+          }
+          className="relative font-semibold inline-block group animate-shimmerText bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80 text-neutral-600/50 dark:text-neutral-400/50"
+        >
           Carlos.
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}
         I&apos;m a{" "}
-        <span className="relative font-semibold inline-block group">
+        <span
+          style={
+            {
+              "--shimmer-width": "100px",
+            } as React.CSSProperties
+          }
+          className="relative font-semibold inline-block group animate-shimmerText bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80 text-neutral-600/50 dark:text-neutral-400/50"
+        >
           Frontend/Mobile developer
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}
@@ -106,7 +120,7 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 w-full sm:w-fit flex justify-center items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group bg-gray-900 text-white px-7 py-3 w-full sm:w-fit flex justify-center items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition-all duration-200 ease-in-out"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -117,7 +131,7 @@ function Intro() {
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 w-full sm:w-fit flex justify-center items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group bg-white px-7 py-3 w-full sm:w-fit flex justify-center items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 transition-all duration-200 ease-in-out"
           href="/docs/Carlos_Gomes_Resume-FE-Dev.pdf"
           download="Carlos_Gomes_Resume-FE-Dev.pdf"
         >
@@ -127,7 +141,7 @@ function Intro() {
 
         <div className="flex items-center gap-3">
           <a
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 transition-all duration-200 ease-in-out outline-none"
             href="https://linkedin.com/in/carlosgomesvallejo"
             target="_blank"
             aria-label="LinkedIn"
@@ -136,7 +150,7 @@ function Intro() {
           </a>
 
           <a
-            className="bg-white p-4 text-gray-700 flex justify-center items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 flex justify-center items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60 transition-all duration-200 ease-in-out outline-none"
             href="https://github.com/cjgv1809"
             target="_blank"
             aria-label="GitHub"

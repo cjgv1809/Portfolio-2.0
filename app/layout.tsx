@@ -8,6 +8,7 @@ import ThemeContextProvider from "@/context/themeSwitchContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Line from "@/components/Line";
+import TracingBeam from "@/components/TracingBeam";
 import "./globals.css";
 
 const Preloader = dynamic(() => import("@/components/Preloader"), {
@@ -45,7 +46,7 @@ const metadata = {
     "I'm a software engineer based in Buenos Aires, Argentina. I'm passionate about web/mobile development, and building communities. ",
   type: "website",
   siteName: "Carlos Gomes",
-  url: "https://carlosgomes.dev",
+  url: "https://portfolio-20-cjgv1809s-projects.vercel.app/",
   image: "/og-image.png",
 };
 
@@ -123,7 +124,7 @@ export default function RootLayout({
             <Suspense fallback={<Preloader />}>
               <AnimatedBackground />
               <Header />
-              {children}
+              <TracingBeam>{children}</TracingBeam>
               <Line />
               <Footer />
               <Toaster position="bottom-center" />

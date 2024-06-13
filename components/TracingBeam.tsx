@@ -58,7 +58,7 @@ function TracingBeam({
                 ? "none"
                 : "rgba(0, 0, 0, 0.24) 0px 3px 7px",
           }}
-          className="ml-[27px] h-4 w-4 rounded-full flex items-center justify-center"
+          className="ml-[27px] h-4 w-4 rounded-full sm:items-center sm:justify-center hidden sm:flex bg-white/95 dark:bg-black/10"
         >
           {/* <motion.div
             transition={{
@@ -82,7 +82,7 @@ function TracingBeam({
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
           height={svgHeight} // Set the SVG height
-          className="ml-4 block"
+          className="ml-4 block opacity-0 sm:opacity-80"
           aria-hidden="true"
         >
           <motion.path
