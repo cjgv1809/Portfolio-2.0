@@ -12,7 +12,7 @@ import { useActiveSection } from "@/hooks/useActiveSection";
 import { useTheme } from "@/hooks/useTheme";
 
 function Intro() {
-  const { ref } = useSectionInView("Home");
+  const { ref } = useSectionInView("Home", 1);
   const { setActiveSection, setTimeOfLastClick } = useActiveSection();
   const { theme } = useTheme();
 

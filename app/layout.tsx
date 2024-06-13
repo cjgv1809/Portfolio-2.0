@@ -1,7 +1,8 @@
 "use client";
 
-import { Suspense } from "react";
+import { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { AnimatePresence } from "framer-motion";
 import dynamic from "next/dynamic";
 import ActiveSectionContextProvider from "@/context/activeSectionContext";
 import ThemeContextProvider from "@/context/themeSwitchContext";
@@ -55,6 +56,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoading = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    };
+    handleLoading();
+  }, []);
+
   return (
     <html lang="en" className="!scroll-smooth overflow-x-hidden">
       <head>
@@ -121,16 +135,21 @@ export default function RootLayout({
       <body className="bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 overflow-hidden">
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
-            <Suspense fallback={<Preloader />}>
-              <AnimatedBackground />
-              <Header />
-              <TracingBeam>{children}</TracingBeam>
-              <Line />
-              <Footer />
-              <Toaster position="bottom-center" />
-              <ThemeSwitch />
-              <ThemeMetaTagUpdater />
-            </Suspense>
+            <AnimatePresence mode="wait">
+              {isLoading && <Preloader />}
+            </AnimatePresence>
+            {!isLoading && (
+              <>
+                <AnimatedBackground />
+                <Header />
+                <TracingBeam>{children}</TracingBeam>
+                <Line />
+                <Footer />
+                <Toaster position="bottom-center" />
+                <ThemeSwitch />
+                <ThemeMetaTagUpdater />
+              </>
+            )}
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
         <Analytics />

@@ -7,7 +7,7 @@ import SectionHeading from "./SectionHeading";
 import ParagraphIntro from "./ParagraphIntro";
 
 function About() {
-  const { ref } = useSectionInView("About");
+  const { ref } = useSectionInView("About", 1);
 
   return (
     <motion.section

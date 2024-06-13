@@ -42,6 +42,7 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
               </li>
             ))}
           </ul>
+          <Meteors number={5} />
         </div>
 
         <Image
@@ -61,7 +62,6 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
 
         group-even:right-[initial] group-even:-left-40"
         />
-        <Meteors number={3} />
       </article>
     </motion.div>
   );
