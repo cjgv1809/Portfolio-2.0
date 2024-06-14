@@ -83,26 +83,12 @@ function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         I&apos;m{" "}
-        <span
-          style={
-            {
-              "--shimmer-width": "100px",
-            } as React.CSSProperties
-          }
-          className="relative font-semibold inline-block group animate-shimmerText bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80 text-neutral-600/50 dark:text-neutral-400/50"
-        >
+        <span className="relative font-semibold inline-block group ">
           Carlos.
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}
         I&apos;m a{" "}
-        <span
-          style={
-            {
-              "--shimmer-width": "100px",
-            } as React.CSSProperties
-          }
-          className="relative font-semibold inline-block group animate-shimmerText bg-clip-text bg-no-repeat [background-position:0_0] [background-size:var(--shimmer-width)_100%] [transition:background-position_1s_cubic-bezier(.6,.6,0,1)] bg-gradient-to-r from-transparent via-black/80 via-50% to-transparent dark:via-white/80 text-neutral-600/50 dark:text-neutral-400/50"
-        >
+        <span className="relative font-semibold inline-block group">
           Frontend/Mobile developer
           <span className="absolute bottom-0 left-0 w-0 h-0.5 dark:bg-white/50 bg-slate-950 transition-all duration-300 ease-out group-hover:w-full"></span>
         </span>{" "}

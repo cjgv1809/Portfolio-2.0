@@ -17,7 +17,7 @@ module.exports = {
       },
       animation: {
         shimmer: "shimmer 5s linear infinite",
-        shimmerText: "shimmerText 8s infinite",
+        // shimmerText: "shimmerText 8s infinite",
         "meteor-effect": "meteor 5s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
       },
@@ -33,14 +33,14 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
-        shimmerText: {
-          "0%, 90%, 100%": {
-            "background-position": "calc(-100% - var(--shimmer-width)) 0",
-          },
-          "30%, 60%": {
-            "background-position": "calc(100% + var(--shimmer-width)) 0",
-          },
-        },
+        // shimmerText: {
+        //   "0%, 90%, 100%": {
+        //     "background-position": "calc(-100% - var(--shimmer-width)) 0",
+        //   },
+        //   "30%, 60%": {
+        //     "background-position": "calc(100% + var(--shimmer-width)) 0",
+        //   },
+        // },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },
